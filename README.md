@@ -23,32 +23,7 @@ We built an end-to-end data analytics framework that:
 
 ---
 
-## 2. Project Architecture & Workflow
-
-```mermaid
-graph LR
-    subgraph 1. Data Ingestion & Audit
-        RAW[Raw 500k Portfolio Records] --> AUDIT[Missing Value & Distribution Audit]
-        AUDIT --> IMP[Contextual Data Cleaning: $0 Event Logs vs Median Risk]
-    end
-
-    subgraph 2. Financial P&L Formulation
-        IMP --> REV[Revenue: NII 20% + Interchange 2.7% + Annual Fees]
-        IMP --> COST[Direct Costs: Statement Credits + Points Redeemed]
-        IMP --> RISK[Expected Credit Loss: PD × EAD × LGD]
-        REV & COST & RISK --> PNL[Net Economic Contribution]
-    end
-
-    subgraph 3. Strategy & Validation
-        PNL --> COHORT[Behavioral Cohort Segmentation]
-        PNL --> DECILE[Decile Stratification D1–D10]
-        DECILE --> ACTIONS[Prescriptive Business Action Matrix]
-    end
-```
-
----
-
-## 3. Methodology & Key Results
+## 2. Methodology & Key Results
 
 ### Financial P&L Formulation
 $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} - \text{Expected Credit Loss} - \text{Delinquency Penalties}$$
@@ -72,7 +47,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 
 ---
 
-## 4. Technical Decisions & Business Choices
+## 3. Technical Decisions & Business Choices
 
 1. **Why Impute Transaction Activity with \$0 Instead of Mean/Median?**
    - In left-joined data warehousing, a `NULL` indicates zero transaction records (hence \$0 expense/revenue for the issuer). Imputing usage with the mean would falsely penalize customers who saved their perks.
@@ -85,7 +60,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 
 ---
 
-## 5. Prescriptive Business Strategy Matrix
+## 4. Prescriptive Business Strategy Matrix
 
 | Cardmember Cohort | Portfolio Decile | Strategic Action & Policy Recommendation |
 | :--- | :--- | :--- |
@@ -96,41 +71,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 
 ---
 
-## 6. How to Run Locally
 
-```bash
-# 1. Setup Environment
-git clone https://github.com/your-username/amex-customer-profitability-analysis.git
-cd amex-customer-profitability-analysis
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Generate synthetic demo dataset (Optional)
-python generate_mock_data.py
-
-# 4. Launch interactive notebook
-jupyter notebook amex_customer_profitability_analysis.ipynb
-```
-
----
-
-## 7. Repository Structure
-
-```
-github/
-├── README.md                                  # Executive summary & documentation
-├── amex_customer_profitability_analysis.ipynb # Step-by-step Exploratory Data Analysis Notebook
-├── generate_mock_data.py                      # Synthetic data generator for open-source testing
-├── requirements.txt                           # Minimal dependencies (pandas, numpy, matplotlib, seaborn)
-├── figures/                                   # High-resolution charts (NO gridlines)
-│   ├── missing_value_audit.png
-│   ├── perk_gamer_discovery.png
-│   ├── customer_cohort_matrix.png
-│   └── decile_lift_chart.png
-└── results/                                   # Final decile summaries & competition submission
-    ├── portfolio_decile_summary.csv
-    └── Amex_Campus_Challenge_Round1_Final.xlsx
 ```
 
 ---
