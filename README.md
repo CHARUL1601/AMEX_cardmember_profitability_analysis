@@ -38,7 +38,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 | **Average Risk Score ($f11$)** | **0.0183** | 0.0655 | **72% Lower Default Risk** |
 | **Average Net Contribution** | **+\$2,276.65** | -\$674.16 | **Significant Margin Spread** |
 
-![Decile Lift Chart](images/decile_lift_chart.png)
+![Decile Lift Chart](Images/decile_lift_chart.png)
 
 ---
 
@@ -51,7 +51,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 3. **Basel II / IFRS 9 Credit Risk Integration**:
    - Rather than treating risk scores as arbitrary penalties, we modeled Expected Loss as $	ext{PD} 	imes 	ext{EAD} 	imes 	ext{LGD}$ with an 85% loss given default benchmark for unsecured credit.
 
-![Customer Cohort Matrix](images/customer_cohort_matrix.png)
+![Customer Cohort Matrix](Images/customer_cohort_matrix.png)
 
 ---
 
