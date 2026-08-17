@@ -70,11 +70,3 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 | **Distressed Accounts** | Deciles 1–2 (Bottom 20%) | Restrict credit lines and freeze overdraft capacity; route to early loss mitigation. |
 
 ---
-
-
-```
-
----
-
-## 📜 License
-This project is open-source under the [MIT License](LICENSE).
