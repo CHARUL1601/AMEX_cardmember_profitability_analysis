@@ -1,10 +1,5 @@
 # American Express: Cardmember Profitability & Customer Lifetime Value (CLV) Analysis
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Pandas](https://img.shields.io/badge/pandas-2.0+-darkblue.svg)](https://pandas.pydata.org/)
-[![Matplotlib](https://img.shields.io/badge/matplotlib-3.7+-green.svg)](https://matplotlib.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 > **A practical, end-to-end Data Analytics case study on 500,000 credit card accounts to model cardmember unit economics, isolate perk gaming arbitrage, and rank order customer profitability.**
 
 ---
@@ -43,7 +38,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 | **Average Risk Score ($f11$)** | **0.0183** | 0.0655 | **72% Lower Default Risk** |
 | **Average Net Contribution** | **+\$2,276.65** | -\$674.16 | **Significant Margin Spread** |
 
-![Decile Lift Chart](figures/decile_lift_chart.png)
+![Decile Lift Chart](images/decile_lift_chart.png)
 
 ---
 
@@ -56,7 +51,7 @@ $$\text{Net Profitability} = \text{Gross Revenue} - \text{Direct Benefit Costs} 
 3. **Basel II / IFRS 9 Credit Risk Integration**:
    - Rather than treating risk scores as arbitrary penalties, we modeled Expected Loss as $	ext{PD} 	imes 	ext{EAD} 	imes 	ext{LGD}$ with an 85% loss given default benchmark for unsecured credit.
 
-![Customer Cohort Matrix](figures/customer_cohort_matrix.png)
+![Customer Cohort Matrix](images/customer_cohort_matrix.png)
 
 ---
 
